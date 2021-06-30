@@ -9,7 +9,7 @@ const forecast = (latitude,longitude,callback) =>{
             return callback( body.error.info)
         }
         else{
-            callback(undefined,"It is currently " +  body.current.temperature + " degrees out. It feels like " +  body.current.feelslike + " degrees out")
+            callback(undefined,"It is currently " +  body.current.temperature + " degrees out. It feels like " +  body.current.feelslike + " degrees out and the humidity is " + body.current.humidity + "% with a wind direction of " + body.current.wind_dir + " is it day light? at "+ body.location.region +": "+body.current.is_day)
         }
     })
 }
